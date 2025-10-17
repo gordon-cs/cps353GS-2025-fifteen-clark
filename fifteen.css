@@ -32,10 +32,19 @@ body {
   background-size: 400px 400px;
 }
 
-/* hover effect */
-#puzzlearea div:hover {
-  background: #d0d0d0;
+/* clickable tile hover effect */
+#puzzlearea div.clickable:hover {
+  filter: blur(1px);
+  background-color: rgba(0, 255, 0, 0.4);
+  background-blend-mode: overlay;
+  cursor: pointer;
 }
+
+#puzzlearea div:hover {
+  cursor: default;
+  filter: blur(1px);
+}
+
 
 /* Row 1 */
 #puzzlearea div:nth-child(1)  { background-position:   0px   0px; }
@@ -60,9 +69,6 @@ body {
 #puzzlearea div:nth-child(14) { background-position: -100px -300px; }
 #puzzlearea div:nth-child(15) { background-position: -200px -300px; }
 
-
-
-
 button {
   font-size: 14pt;
   border: none;
@@ -71,9 +77,11 @@ button {
   border-radius: 4px;
   cursor: pointer;
 }
+
 button:hover {
   background: #000000;
 }
+
 p{
   max-width: 800px;
 }
